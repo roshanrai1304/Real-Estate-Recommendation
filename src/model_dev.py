@@ -514,10 +514,10 @@ class BayesianRidgeModel(Model):
     
     
 class Stacking(StackedModel):
-    def __init__(self,mod,meta_model):
+    def __init__(self,mod,meta_model, **kwargs):
         self.mod = mod
         self.meta_model = meta_model
-        self.kf = KFold(n_splits=5, random_state=42, shuffle=True)
+        self.kf = KFold(**kwargs)
         
     def fit(self,X,y):
         self.saved_model = [list() for i in self.mod]
