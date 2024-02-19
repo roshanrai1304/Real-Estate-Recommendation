@@ -65,7 +65,6 @@ class DataPreProcessingStrategy(DataStrategy):
             for i in range(0, len(data.columns)):
                 if data.iloc[:,i].dtype == 'object':
                     object_columns.append(data.iloc[:,i].name)
-                    print(data.iloc[:,i].dtype)
                     
             for i in object_columns:
                 data[i] = pd.to_numeric(data[i])
