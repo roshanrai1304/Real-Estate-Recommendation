@@ -73,7 +73,7 @@ class StackedModel(ABC, BaseEstimator, TransformerMixin, RegressorMixin):
         pass
     
     @abstractmethod
-    def get_oof(self, X, ):
+    def get_oof(self, X):
         """
         Generates out-of-fold predictions for the training data and mean predictions for the test data.
         Similar to the fit method but collects out-of-fold predictions for both training and test data separately.
@@ -83,26 +83,6 @@ class StackedModel(ABC, BaseEstimator, TransformerMixin, RegressorMixin):
             
         Returns:
             type: Predictions
-        """
-        pass
-    
-    @abstractmethod
-    def save_model(self, filename):
-        """
-        Save the stacking ensemble model to a file.
-
-        Parameters:
-        - filename (str): The name of the file to save the model.
-        """
-        pass
-    
-    @abstractmethod
-    def load_model(self, filename):
-        """
-        Load the stacking ensemble model to a file.
-
-        Parameters:
-        - filename (str): The name of the file to save the model.
         """
         pass
     
@@ -518,9 +498,20 @@ class Stacking(StackedModel):
         self.mod = mod
         self.meta_model = meta_model
         self.kf = KFold(**kwargs)
+        self.best_model = None
+        self.best_accuracy = float('-inf') # Initate with negative infinity
         
     def fit(self,X,y):
-        self.saved_model = [list() for i in self.mod]
+        
+        """
+        Trains the stacking ensemble on the input data (X, y).
+         Iterates over each base model, clones it for each fold in the k-fold cross-validation, and fits it to the training data.
+         Collects the out-of-fold predictions for each base model and uses them as features to train the meta-model.
+
+        Returns:
+            
+        """
+        self.saved_model = [list() for _ in self.mod]
         oof_train = np.zeros((X.shape[0], len(self.mod)))
         
         for i,model in enumerate(self.mod):
@@ -530,14 +521,37 @@ class Stacking(StackedModel):
                 self.saved_model[i].append(renew_model)
                 oof_train[val_index,i] = renew_model.predict(X[val_index])
         
+        # Calculate accuracy and save the best model
+            accuracy = np.mean(y[val_index] == oof_train[val_index, i])
+            if accuracy > self.best_accuracy:
+                self.best_accuracy = accuracy
+                self.best_model = renew_model
+        
         self.meta_model.fit(oof_train,y)
         return self
     
     def predict(self,X):
+        
+        """
+         Generates predictions for new data using the trained stacking ensemble.
+        Combines predictions from each base model for each fold and calculates the mean.
+        Uses the mean predictions as features for the meta-model to make the final prediction.
+
+        Returns:
+            numpy array
+        """
         whole_test = np.column_stack([np.column_stack(model.predict(X) for model in single_model).mean(axis=1) for single_model in self.saved_model]) 
         return self.meta_model.predict(whole_test)
     
     def get_oof(self,X,y,test_X):
+        
+        """
+         Generates out-of-fold predictions for the training data and mean predictions for the test data.
+         Similar to the fit method but collects out-of-fold predictions for both training and test data separately.
+         
+        Returns:
+            _type_: _description_
+        """
         oof = np.zeros((X.shape[0],len(self.mod)))
         test_single = np.zeros((test_X.shape[0],5))
         test_mean = np.zeros((test_X.shape[0],len(self.mod)))
@@ -550,31 +564,3 @@ class Stacking(StackedModel):
             test_mean[:,i] = test_single.mean(axis=1)
         return oof, test_mean
     
-    def save_model(self, filename):
-        """
-        Save the stacking ensemble model to a file.
-
-        Parameters:
-        - filename (str): The name of the file to save the model.
-        """
-        joblib.dump(self, filename)
-        
-    @classmethod
-    def load_model(cls, filename):
-        """
-        Load the stacking ensemble model from a file.
-
-        Parameters:
-        - filename (str): The name of the file containing the saved model.
-
-        Returns:
-        - Stacking: The loaded stacking ensemble model.
-        """
-        return joblib.load(filename)
-    
-       
-    
-
-    
-        
-

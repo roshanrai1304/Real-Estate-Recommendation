@@ -109,8 +109,8 @@ class DataDivideStrategy(DataStrategy):
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
             X_train = SimpleImputer().fit_transform(X_train)
             X_test = SimpleImputer().fit_transform(X_test)
-            y_train = SimpleImputer().fit_transform(y_train)
-            y_test = SimpleImputer().fit_transform(y_test)
+            y_train = SimpleImputer().fit_transform(y_train.values.reshape(-1,1)).ravel()
+            y_test = SimpleImputer().fit_transform(y_test.values.reshape(-1,1)).ravel()
             return X_train, X_test, y_train, y_test
         except Exception as e:
             logging.error("Error in dividing data {}".format(e))
