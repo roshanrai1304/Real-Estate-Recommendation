@@ -46,7 +46,7 @@ def run_deployment(config: str, min_accuracy: float):
             timeout=60,)
     if predict:
         inference_pipeline(
-            pipeline_name=continuous_deployment_pipeline,
+            pipeline_name="continuous_deployment_pipeline",
             pipeline_step_name="mlflow_model_deployer_step"
         )
         

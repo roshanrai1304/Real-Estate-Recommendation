@@ -111,7 +111,7 @@ def predictor(
                 'pricePerSqFeet',
                 'shoppingArea']
     
-    df = pd.DataFrame(data["data"])
+    df = pd.DataFrame(data["data"], columns=columns_for_df)
     json_list = json.loads(json.dumps(list(df.T.to_dict().values())))
     data = np.array(json_list)
     prediction = service.predict(data)
