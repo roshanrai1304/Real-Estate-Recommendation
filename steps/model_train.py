@@ -31,10 +31,10 @@ def rmse_cv(model, features, label):
 
 @step(experiment_tracker=experiment_tracker.name)
 def train_model(
-    X_train: np.ndarray,
-    X_test: np.ndarray,
-    y_train: np.ndarray,
-    y_test: np.ndarray,
+    X_train: pd.DataFrame,
+    X_test: pd.DataFrame,
+    y_train: pd.DataFrame,
+    y_test: pd.DataFrame,
     config: ModelNameConfig
 ) -> RegressorMixin:
     

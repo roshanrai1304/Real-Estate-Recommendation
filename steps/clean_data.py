@@ -14,10 +14,10 @@ from src.data_cleaning import DataDivideStrategy
 
 @step
 def clean_df(df: Union[pd.DataFrame, Series]) ->Tuple[
-    Annotated[np.ndarray, "X_train"],
-    Annotated[np.ndarray, "X_test"],
-    Annotated[np.ndarray, "y_train"],
-    Annotated[np.ndarray, "y_test"],
+    Annotated[pd.DataFrame, "X_train"],
+    Annotated[pd.DataFrame, "X_test"],
+    Annotated[pd.Series, "y_train"],
+    Annotated[pd.Series, "y_test"],
 ]:
     """
     Cleans the data and divde it into train and test also prepares the data for stacking
