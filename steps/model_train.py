@@ -47,7 +47,8 @@ def train_model(
     """
     try:
         model=None
-        model = config.model_name
+        # model = config.model_name
+        model = config.model_lin_reg
         mlflow.sklearn.autolog()
         if model == "Stacking":
             lasso = LassoModel(alpha= 0.0005, max_iter= 10000)
@@ -63,6 +64,10 @@ def train_model(
             stack_model.fit(X_train, y_train)
             # print(f"The score is -> {score.mean()}")
             return stack_model
+        elif model == "LinearRegression":
+            linear = LinearRegressionModel()
+            linear.fit(X_train, y_train)
+            return linear
         else:
             raise ValueError("Model {} not supported".format(config.model_name))
             

@@ -106,14 +106,40 @@ class DataDivideStrategy(DataStrategy):
             X = data.drop(['totalPrice'], axis=1)
             y = data['totalPrice']
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            X_train = SimpleImputer().fit_transform(X_train)
-            X_test = SimpleImputer().fit_transform(X_test)
-            y_train = SimpleImputer().fit_transform(y_train.values.reshape(-1,1)).ravel()
-            y_test = SimpleImputer().fit_transform(y_test.values.reshape(-1,1)).ravel()
             return X_train, X_test, y_train, y_test
         except Exception as e:
             logging.error("Error in dividing data {}".format(e))
             raise e
+        
+# class DataDivideStrategy(DataStrategy):
+    
+#     """
+#     Strategy for dividing data into train and test
+#     """
+    
+#     def handle_data(self, data: pd.DataFrame) -> Union[pd.DataFrame, pd.Series]:
+#         """
+#         Divide data into train and test set
+
+#         Args:
+#             data (pd.DataFrame)
+
+#         Returns:
+#             Union[pd.DataFrame, pd.Series]
+#         """
+        
+#         try:
+#             X = data.drop(['totalPrice'], axis=1)
+#             y = data['totalPrice']
+#             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#             X_train = SimpleImputer().fit_transform(X_train)
+#             X_test = SimpleImputer().fit_transform(X_test)
+#             y_train = SimpleImputer().fit_transform(y_train.values.reshape(-1,1)).ravel()
+#             y_test = SimpleImputer().fit_transform(y_test.values.reshape(-1,1)).ravel()
+#             return X_train, X_test, y_train, y_test
+#         except Exception as e:
+#             logging.error("Error in dividing data {}".format(e))
+#             raise e
         
         
 class DataCleaning:

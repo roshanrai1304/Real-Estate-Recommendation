@@ -4,6 +4,8 @@ class ModelNameConfig(BaseParameters):
     """Model Configs"""
     model_name: str = "Stacking"
     
+    model_lin_reg: str = "LinearRegression"
+    
     """Stacking weights"""
     lasso_weight = 0.047
     ridge_weight = 0.2
