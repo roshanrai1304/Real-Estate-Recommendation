@@ -1,15 +1,8 @@
-from zenml.steps import BaseParameters
 
-class ModelNameConfig(BaseParameters):
-    """Model Configs"""
-    model_name: str = "Stacking"
-    
-    model_lin_reg: str = "LinearRegression"
-    
-    """Stacking weights"""
-    lasso_weight = 0.047
-    ridge_weight = 0.2
-    svr_weight = 0.25
-    ker_weight = 0.3
-    elastic_weight = 0.003
-    bay_weight = 0.2
+"""Model Configs"""
+# model_name: str = "Stacking"
+
+# model_lin_reg: str = "LinearRegression"
+
+model_names: list = ["LinearRegression", "RandomForest", "GradientBoost", "SVR"]
+# model_names: list = ["Stacking"]

@@ -55,7 +55,6 @@ class DataPreProcessingStrategy(DataStrategy):
                  "closestHospitalDistance", "closestMallDistance", "closestBusinessParkDistance", "noOfBathrooms", "swimmingPool", "ATM/Finance"],
                 axis=1
             )
-            
             data = data[data['flatType'] != 'REFUGE']
             data = data[data['Area'] != 'REFUGE']
             data = data[data['pricePerSqFeet'] != 'REFUGE']
@@ -69,13 +68,15 @@ class DataPreProcessingStrategy(DataStrategy):
             for i in object_columns:
                 data[i] = pd.to_numeric(data[i])
                 
+                
             data['totalPrice'] = np.log(data['totalPrice'])
             data['Area'] = np.log(data['Area'])
             data['pricePerSqFeet'] = np.log(data['pricePerSqFeet'])
-            
+            print(data)
             data_columns = data.columns
-            data_scaled = StandardScaler().fit_transform(data.to_numpy())
-            data = pd.DataFrame(data_scaled, columns=data_columns)            
+            # data_transform = scaling.transform(data.to_numpy())
+            # print(data_scaled)    
+            data = pd.DataFrame(data, columns=data_columns)            
              
             return data
         
@@ -83,7 +84,6 @@ class DataPreProcessingStrategy(DataStrategy):
             logging.error("Error in preprocessing data: {}".format(e))
             raise e
             
-
 
 class DataDivideStrategy(DataStrategy):
     
@@ -106,41 +106,20 @@ class DataDivideStrategy(DataStrategy):
             X = data.drop(['totalPrice'], axis=1)
             y = data['totalPrice']
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            return X_train, X_test, y_train, y_test
+            print(f"-> {y_test[:10]}")
+            scaling_X = StandardScaler().fit(X_train)
+            scaling_y = StandardScaler().fit(y_train.to_numpy().reshape(-1,1))
+            X_train = scaling_X.transform(X_train.to_numpy())
+            X_test = scaling_X.transform(X_test.to_numpy())
+            print(f"-> {y_test[:10]}")
+            print(f"-> {np.exp(y_test[:10])}")
+            y_train = scaling_y.transform(y_train.to_numpy().reshape(-1,1))
+            y_test = scaling_y.transform(y_test.to_numpy().reshape(-1,1))
+            return X_train, X_test, y_train, y_test, scaling_X, scaling_y
         except Exception as e:
             logging.error("Error in dividing data {}".format(e))
             raise e
-        
-# class DataDivideStrategy(DataStrategy):
-    
-#     """
-#     Strategy for dividing data into train and test
-#     """
-    
-#     def handle_data(self, data: pd.DataFrame) -> Union[pd.DataFrame, pd.Series]:
-#         """
-#         Divide data into train and test set
-
-#         Args:
-#             data (pd.DataFrame)
-
-#         Returns:
-#             Union[pd.DataFrame, pd.Series]
-#         """
-        
-#         try:
-#             X = data.drop(['totalPrice'], axis=1)
-#             y = data['totalPrice']
-#             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-#             X_train = SimpleImputer().fit_transform(X_train)
-#             X_test = SimpleImputer().fit_transform(X_test)
-#             y_train = SimpleImputer().fit_transform(y_train.values.reshape(-1,1)).ravel()
-#             y_test = SimpleImputer().fit_transform(y_test.values.reshape(-1,1)).ravel()
-#             return X_train, X_test, y_train, y_test
-#         except Exception as e:
-#             logging.error("Error in dividing data {}".format(e))
-#             raise e
-        
+     
         
 class DataCleaning:
     
@@ -165,18 +144,26 @@ class DataCleaning:
         except Exception as e:
             logging.error("Error in handling data: {}".format(e))
             raise e
+        
+if __name__ == "__main__":
     
-# if __name__ == "__main__":
-    
-#     data = pd.read_csv(r'C:\Users\HP\Documents\mihir project\Real-Estate-Recommendation\data\processed_real_estate_data -  newLabel.csv')
-#     data_cleaning = DataCleaning(data, DataPreProcessingStrategy())
-#     data = data_cleaning.handle_data()
-#     data_divide = DataCleaning(data, DataDivideStrategy())
-#     X_train, X_test, y_train, y_test = data_divide.handle_data()
-#     impute = DataCleaning(X_train, DataStackingStrategy())
-#     x_imputed = impute.handle_data()
-#     y_impute = impute.handle_data()
-#     # print(x_imputed)
-#     # print(y_impute)
+    data = pd.read_csv(r"C:\Users\HP\Documents\mihir project\Real-Estate-Recommendation mlflow\data\processed_real_estate_data -  newLabel.csv")
+    columns_for_df = ['closestEducationalInstituteDistance',
+                'flatType',
+                'Area',
+                'pricePerSqFeet',
+                'shoppingArea']
+    # data = data[columns_for_df].iloc[0:10, :]
+    data = data.iloc[:, 1:]
+    data = data.iloc[:10,:]
+    # print(data)
+    data_cleaning = DataCleaning(data.iloc[:10,:], DataPreProcessingStrategy())
+    data = data_cleaning.handle_data()
+    data_divide = DataCleaning(data, DataDivideStrategy())
+    X_train, X_test, y_train, y_test, scaling_X, scaling_y = data_divide.handle_data()
+    print((X_test))
+    print(scaling_X.inverse_transform(X_test))
+    print("yes")
+    X_test
     
             

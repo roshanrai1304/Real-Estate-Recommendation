@@ -40,7 +40,7 @@ def run_deployment(config: str, min_accuracy: float):
     
     if deploy:
         continuous_deployment_pipeline(
-            data_path=r"C:\Users\HP\Documents\mihir project\Real-Estate-Recommendation\data\processed_real_estate_data -  newLabel.csv",
+            data_path=r"C:\Users\HP\Documents\mihir project\Real-Estate-Recommendation mlflow\data\processed_real_estate_data -  newLabel.csv",
             min_accuracy=min_accuracy,
             workers=3,
             timeout=60,)

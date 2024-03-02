@@ -527,7 +527,7 @@ class Stacking(StackedModel):
                 self.best_accuracy = accuracy
                 self.best_model = renew_model
         
-        self.meta_model.fit(oof_train,y)
+        self.meta_model.fit(oof_train)
         return self
     
     def predict(self,X):

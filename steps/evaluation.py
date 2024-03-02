@@ -9,17 +9,11 @@ from src.evaluation import MSE, R2, RMSE
 from typing import Tuple
 from typing_extensions import Annotated
 
-from zenml import step
-from zenml.client import Client
 
-experiment_tracker = Client().active_stack.experiment_tracker
-
-
-@step(experiment_tracker=experiment_tracker.name)
 def evaluate_model(model: RegressorMixin,
                    X_test: pd.DataFrame,
                    y_test: pd.Series
-) -> Tuple[Annotated[float, "r2_score"], Annotated[float, "rmse"]] :
+) -> Tuple[Annotated[float, "r2_score"], Annotated[float, "rmse"], Annotated[np.ndarray, "y_pred"]] :
     
     """
     Args:
@@ -30,6 +24,7 @@ def evaluate_model(model: RegressorMixin,
     Return:
      r2_score: float
      rmse: float
+     y_pred: np.ndarray
     """
     
     try:
@@ -46,7 +41,7 @@ def evaluate_model(model: RegressorMixin,
       rmse = rmse_class.calculate_scores(y_test, prediction)
       mlflow.log_metric("rmse", rmse)
 
-      return r2, rmse
+      return r2, rmse, prediction
     except Exception as e:
       logging.error("Error in evaluating model: {}".format(e))
       raise e

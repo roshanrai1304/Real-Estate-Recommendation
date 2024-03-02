@@ -1,7 +1,6 @@
 import logging
 import pandas as pd
 import numpy as np
-from zenml import step
 from typing import Tuple
 from typing_extensions import Annotated
 from pandas.core.api import Series
@@ -12,7 +11,6 @@ from src.data_cleaning import DataDivideStrategy
 
 
 
-@step
 def clean_df(df: Union[pd.DataFrame, Series]) ->Tuple[
     Annotated[pd.DataFrame, "X_train"],
     Annotated[pd.DataFrame, "X_test"],
@@ -40,9 +38,9 @@ def clean_df(df: Union[pd.DataFrame, Series]) ->Tuple[
       
       divide_strategy = DataDivideStrategy()
       data_cleaning = DataCleaning(preprocessed_data, divide_strategy)
-      X_train, X_test, y_train, y_test = data_cleaning.handle_data()
+      X_train, X_test, y_train, y_test, scaling_X, scaling_y = data_cleaning.handle_data()
       logging.info("Data cleaning completed")
-      return X_train, X_test, y_train, y_test
+      return X_train, X_test, y_train, y_test, scaling_X, scaling_y
     except Exception as e:
       logging.error("Error in cleaning data: {}".format(e))
       raise e  
