@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9ee79d0a037f4999affc2c1c32f90737/artifacts
+end_time: 1709353153541
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9ee79d0a037f4999affc2c1c32f90737
+run_name: stylish-moth-645
+run_uuid: 9ee79d0a037f4999affc2c1c32f90737
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709353149436
+status: 3
+tags: []
+user_id: HP

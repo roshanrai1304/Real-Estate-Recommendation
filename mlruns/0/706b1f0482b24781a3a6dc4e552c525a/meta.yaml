@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/706b1f0482b24781a3a6dc4e552c525a/artifacts
+end_time: 1709353025305
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 706b1f0482b24781a3a6dc4e552c525a
+run_name: mysterious-goat-841
+run_uuid: 706b1f0482b24781a3a6dc4e552c525a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709353019285
+status: 3
+tags: []
+user_id: HP

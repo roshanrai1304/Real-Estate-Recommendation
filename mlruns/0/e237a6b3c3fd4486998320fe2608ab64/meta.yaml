@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e237a6b3c3fd4486998320fe2608ab64/artifacts
+end_time: 1709354334215
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e237a6b3c3fd4486998320fe2608ab64
+run_name: nebulous-turtle-678
+run_uuid: e237a6b3c3fd4486998320fe2608ab64
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709354334066
+status: 3
+tags: []
+user_id: HP

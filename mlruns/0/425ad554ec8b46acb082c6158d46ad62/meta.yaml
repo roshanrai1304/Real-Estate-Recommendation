@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/425ad554ec8b46acb082c6158d46ad62/artifacts
+end_time: 1709353157640
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 425ad554ec8b46acb082c6158d46ad62
+run_name: adorable-moth-119
+run_uuid: 425ad554ec8b46acb082c6158d46ad62
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709353153558
+status: 3
+tags: []
+user_id: HP

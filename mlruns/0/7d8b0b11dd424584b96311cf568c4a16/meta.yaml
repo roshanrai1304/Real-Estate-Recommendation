@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/7d8b0b11dd424584b96311cf568c4a16/artifacts
+end_time: 1709353029779
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7d8b0b11dd424584b96311cf568c4a16
+run_name: intelligent-fowl-95
+run_uuid: 7d8b0b11dd424584b96311cf568c4a16
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709353025338
+status: 3
+tags: []
+user_id: HP

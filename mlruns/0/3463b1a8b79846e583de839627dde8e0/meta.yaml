@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3463b1a8b79846e583de839627dde8e0/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3463b1a8b79846e583de839627dde8e0
+run_name: incongruous-wolf-293
+run_uuid: 3463b1a8b79846e583de839627dde8e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709353625679
+status: 1
+tags: []
+user_id: HP

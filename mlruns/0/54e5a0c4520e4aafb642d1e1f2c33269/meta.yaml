@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/54e5a0c4520e4aafb642d1e1f2c33269/artifacts
+end_time: 1709354444471
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 54e5a0c4520e4aafb642d1e1f2c33269
+run_name: nervous-bug-747
+run_uuid: 54e5a0c4520e4aafb642d1e1f2c33269
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709354440132
+status: 3
+tags: []
+user_id: HP

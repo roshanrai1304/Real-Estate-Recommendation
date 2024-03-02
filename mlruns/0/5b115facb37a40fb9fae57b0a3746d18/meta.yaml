@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5b115facb37a40fb9fae57b0a3746d18/artifacts
+end_time: 1709354187891
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5b115facb37a40fb9fae57b0a3746d18
+run_name: gaudy-skink-481
+run_uuid: 5b115facb37a40fb9fae57b0a3746d18
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709354187739
+status: 3
+tags: []
+user_id: HP
