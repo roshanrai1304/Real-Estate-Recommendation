@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4470052a265d4f3397f5bc443f386762/artifacts
+end_time: 1709398439013
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4470052a265d4f3397f5bc443f386762
+run_name: amusing-toad-434
+run_uuid: 4470052a265d4f3397f5bc443f386762
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398438930
+status: 3
+tags: []
+user_id: HP

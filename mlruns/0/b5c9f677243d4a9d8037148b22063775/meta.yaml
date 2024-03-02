@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b5c9f677243d4a9d8037148b22063775/artifacts
+end_time: 1709398358744
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b5c9f677243d4a9d8037148b22063775
+run_name: victorious-hound-464
+run_uuid: b5c9f677243d4a9d8037148b22063775
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398358538
+status: 3
+tags: []
+user_id: HP

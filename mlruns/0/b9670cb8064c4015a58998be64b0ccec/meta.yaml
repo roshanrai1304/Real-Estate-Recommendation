@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b9670cb8064c4015a58998be64b0ccec/artifacts
+end_time: 1709399117075
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b9670cb8064c4015a58998be64b0ccec
+run_name: salty-kite-824
+run_uuid: b9670cb8064c4015a58998be64b0ccec
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709399116901
+status: 3
+tags: []
+user_id: HP

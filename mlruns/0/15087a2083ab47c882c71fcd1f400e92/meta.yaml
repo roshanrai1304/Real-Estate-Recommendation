@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/15087a2083ab47c882c71fcd1f400e92/artifacts
+end_time: 1709355623604
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 15087a2083ab47c882c71fcd1f400e92
+run_name: valuable-rook-630
+run_uuid: 15087a2083ab47c882c71fcd1f400e92
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709355619162
+status: 3
+tags: []
+user_id: HP

@@ -40,7 +40,7 @@ def evaluate_model(model: RegressorMixin,
       rmse_class = RMSE()
       rmse = rmse_class.calculate_scores(y_test, prediction)
       mlflow.log_metric("rmse", rmse)
-
+      logging.info("Completed Metrics")
       return r2, rmse, prediction
     except Exception as e:
       logging.error("Error in evaluating model: {}".format(e))

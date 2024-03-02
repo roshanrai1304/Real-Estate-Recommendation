@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8fc648ee667148b8a0b0a246f9f70d1d/artifacts
+end_time: 1709359984194
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8fc648ee667148b8a0b0a246f9f70d1d
+run_name: angry-fly-397
+run_uuid: 8fc648ee667148b8a0b0a246f9f70d1d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709359975480
+status: 3
+tags: []
+user_id: HP

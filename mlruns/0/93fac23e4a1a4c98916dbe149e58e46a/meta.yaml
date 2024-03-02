@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/93fac23e4a1a4c98916dbe149e58e46a/artifacts
+end_time: 1709355627911
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 93fac23e4a1a4c98916dbe149e58e46a
+run_name: funny-shad-5
+run_uuid: 93fac23e4a1a4c98916dbe149e58e46a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709355623621
+status: 3
+tags: []
+user_id: HP

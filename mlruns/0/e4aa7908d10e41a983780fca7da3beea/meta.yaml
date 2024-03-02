@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e4aa7908d10e41a983780fca7da3beea/artifacts
+end_time: 1709398604970
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e4aa7908d10e41a983780fca7da3beea
+run_name: aged-goat-542
+run_uuid: e4aa7908d10e41a983780fca7da3beea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398604886
+status: 3
+tags: []
+user_id: HP

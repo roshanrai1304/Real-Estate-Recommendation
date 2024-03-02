@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8f719a7697fb445e9158568f5455282a/artifacts
+end_time: 1709399456635
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8f719a7697fb445e9158568f5455282a
+run_name: upbeat-squid-467
+run_uuid: 8f719a7697fb445e9158568f5455282a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709399456460
+status: 3
+tags: []
+user_id: HP

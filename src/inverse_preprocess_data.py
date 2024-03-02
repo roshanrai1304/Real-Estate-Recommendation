@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
+import pickle
 
 #abstract class
 class InverseDataStrategy(ABC):
@@ -23,7 +24,7 @@ class InverseDataProcessing(InverseDataStrategy):
     Strategy for inverse processing data
     """
     
-    def inverse_data(self, X_test: np.ndarray, y_true:np.ndarray, y_pred:np.ndarray, scaler_X:StandardScaler, scaler_y:StandardScaler) -> pd.DataFrame:
+    def inverse_data(self, X_test: np.ndarray, y_true:np.ndarray, y_pred:np.ndarray) -> pd.DataFrame:
         
         """
         Inverse process the data to its original values
@@ -40,16 +41,21 @@ class InverseDataProcessing(InverseDataStrategy):
                     'Area',
                     'pricePerSqFeet',
                     'shoppingArea']
+            with open("scalers/scaling_X.pkl", 'rb') as f:
+                scaler_X = pickle.load(f)
+            with open("scalers/scaling_y.pkl", 'rb') as g:
+                scaler_y = pickle.load(g)
             
             X_test = scaler_X.inverse_transform(X_test)
             y_true = np.exp(scaler_y.inverse_transform(y_true.reshape(-1,1).ravel()))
             y_pred = np.exp(scaler_y.inverse_transform(y_pred.reshape(-1,1).ravel()))
             X_test = pd.DataFrame(X_test, columns=columns_for_df)
+            print("inverse data")
             X_test['Area'] = np.exp(X_test['Area'])
             X_test['pricePerSqFeet'] = np.exp(X_test['pricePerSqFeet'])
             dic = {
-                    "totalSalePrice": y_pred,
-                    "predictedSalePrice": y_true
+                    "totalSalePrice": y_true,
+                    "predictedSalePrice": y_pred
                 }
             y_results = pd.DataFrame(dic)
             data = pd.concat([X_test, y_results], axis=1)

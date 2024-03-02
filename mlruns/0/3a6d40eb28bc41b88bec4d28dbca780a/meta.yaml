@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3a6d40eb28bc41b88bec4d28dbca780a/artifacts
+end_time: 1709398359134
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3a6d40eb28bc41b88bec4d28dbca780a
+run_name: marvelous-smelt-906
+run_uuid: 3a6d40eb28bc41b88bec4d28dbca780a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398359011
+status: 3
+tags: []
+user_id: HP

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/774ce4afed024dd38c1c27efa597f4e5/artifacts
+end_time: 1709398438511
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 774ce4afed024dd38c1c27efa597f4e5
+run_name: exultant-cod-493
+run_uuid: 774ce4afed024dd38c1c27efa597f4e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398438340
+status: 3
+tags: []
+user_id: HP

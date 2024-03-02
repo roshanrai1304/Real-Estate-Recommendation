@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8ae2ac70512f4a5b86176829152e252b/artifacts
+end_time: 1709399641153
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8ae2ac70512f4a5b86176829152e252b
+run_name: clumsy-goose-181
+run_uuid: 8ae2ac70512f4a5b86176829152e252b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709399636491
+status: 3
+tags: []
+user_id: HP

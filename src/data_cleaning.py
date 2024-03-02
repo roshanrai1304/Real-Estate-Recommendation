@@ -7,7 +7,7 @@ from pandas.core.api import Series as Series
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
+import pickle
 
 """
     The purpose of abstract methods is to define a method in an abstract base class 
@@ -106,16 +106,17 @@ class DataDivideStrategy(DataStrategy):
             X = data.drop(['totalPrice'], axis=1)
             y = data['totalPrice']
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            print(f"-> {y_test[:10]}")
             scaling_X = StandardScaler().fit(X_train)
             scaling_y = StandardScaler().fit(y_train.to_numpy().reshape(-1,1))
             X_train = scaling_X.transform(X_train.to_numpy())
             X_test = scaling_X.transform(X_test.to_numpy())
-            print(f"-> {y_test[:10]}")
-            print(f"-> {np.exp(y_test[:10])}")
             y_train = scaling_y.transform(y_train.to_numpy().reshape(-1,1))
             y_test = scaling_y.transform(y_test.to_numpy().reshape(-1,1))
-            return X_train, X_test, y_train, y_test, scaling_X, scaling_y
+            with open("scalers/scaling_X.pkl", 'wb') as f:
+              pickle.dump(scaling_X, f)
+            with open("scalers/scaling_y.pkl", 'wb') as f:
+              pickle.dump(scaling_y, f)
+            return X_train, X_test, y_train, y_test
         except Exception as e:
             logging.error("Error in dividing data {}".format(e))
             raise e

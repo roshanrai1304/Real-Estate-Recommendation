@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/84982c61d2674df28a0e36c4b3186a3b/artifacts
+end_time: 1709355570636
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 84982c61d2674df28a0e36c4b3186a3b
+run_name: enthused-asp-925
+run_uuid: 84982c61d2674df28a0e36c4b3186a3b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709355564936
+status: 3
+tags: []
+user_id: HP

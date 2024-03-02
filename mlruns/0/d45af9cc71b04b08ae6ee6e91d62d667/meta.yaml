@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d45af9cc71b04b08ae6ee6e91d62d667/artifacts
+end_time: 1709359997236
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d45af9cc71b04b08ae6ee6e91d62d667
+run_name: debonair-frog-71
+run_uuid: d45af9cc71b04b08ae6ee6e91d62d667
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709359992314
+status: 3
+tags: []
+user_id: HP

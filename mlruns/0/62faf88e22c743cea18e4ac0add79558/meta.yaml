@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/62faf88e22c743cea18e4ac0add79558/artifacts
+end_time: 1709355612887
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 62faf88e22c743cea18e4ac0add79558
+run_name: powerful-shrimp-394
+run_uuid: 62faf88e22c743cea18e4ac0add79558
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709355604634
+status: 3
+tags: []
+user_id: HP

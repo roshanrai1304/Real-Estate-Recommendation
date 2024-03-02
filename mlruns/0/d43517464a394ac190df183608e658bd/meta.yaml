@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d43517464a394ac190df183608e658bd/artifacts
+end_time: 1709398774536
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d43517464a394ac190df183608e658bd
+run_name: colorful-lynx-762
+run_uuid: d43517464a394ac190df183608e658bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398774354
+status: 3
+tags: []
+user_id: HP

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5eb97dca32eb4fcf80071f853056885d/artifacts
+end_time: 1709398729235
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5eb97dca32eb4fcf80071f853056885d
+run_name: marvelous-duck-876
+run_uuid: 5eb97dca32eb4fcf80071f853056885d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398729067
+status: 3
+tags: []
+user_id: HP

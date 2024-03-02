@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c75f57bd6bdf4bd9a13d199300d04c1d/artifacts
+end_time: 1709398359235
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c75f57bd6bdf4bd9a13d199300d04c1d
+run_name: glamorous-stag-337
+run_uuid: c75f57bd6bdf4bd9a13d199300d04c1d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709398359150
+status: 3
+tags: []
+user_id: HP

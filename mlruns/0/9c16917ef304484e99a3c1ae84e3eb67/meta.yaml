@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9c16917ef304484e99a3c1ae84e3eb67/artifacts
+end_time: 1709355179053
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9c16917ef304484e99a3c1ae84e3eb67
+run_name: painted-fowl-55
+run_uuid: 9c16917ef304484e99a3c1ae84e3eb67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709355178881
+status: 3
+tags: []
+user_id: HP

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/7a76ca5a710843e4bf7b92ab997b9204/artifacts
+end_time: 1709359732624
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7a76ca5a710843e4bf7b92ab997b9204
+run_name: mysterious-cow-190
+run_uuid: 7a76ca5a710843e4bf7b92ab997b9204
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709359726570
+status: 3
+tags: []
+user_id: HP

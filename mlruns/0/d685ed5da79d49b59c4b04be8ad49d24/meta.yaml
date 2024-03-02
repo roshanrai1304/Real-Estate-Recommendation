@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d685ed5da79d49b59c4b04be8ad49d24/artifacts
+end_time: 1709359742237
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d685ed5da79d49b59c4b04be8ad49d24
+run_name: bedecked-whale-940
+run_uuid: d685ed5da79d49b59c4b04be8ad49d24
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709359737591
+status: 3
+tags: []
+user_id: HP
