@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4be29c38f3254f92953cca38a8cbb981/artifacts
+end_time: 1709469263641
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4be29c38f3254f92953cca38a8cbb981
+run_name: mercurial-crane-773
+run_uuid: 4be29c38f3254f92953cca38a8cbb981
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709469263514
+status: 3
+tags: []
+user_id: HP

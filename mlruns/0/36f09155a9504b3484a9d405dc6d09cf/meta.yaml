@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/36f09155a9504b3484a9d405dc6d09cf/artifacts
+end_time: 1709469768367
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 36f09155a9504b3484a9d405dc6d09cf
+run_name: clean-calf-734
+run_uuid: 36f09155a9504b3484a9d405dc6d09cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709469765056
+status: 3
+tags: []
+user_id: HP

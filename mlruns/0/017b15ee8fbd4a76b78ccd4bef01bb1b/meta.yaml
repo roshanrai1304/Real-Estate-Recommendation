@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/017b15ee8fbd4a76b78ccd4bef01bb1b/artifacts
+end_time: 1709470464837
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 017b15ee8fbd4a76b78ccd4bef01bb1b
+run_name: adaptable-tern-568
+run_uuid: 017b15ee8fbd4a76b78ccd4bef01bb1b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709470464771
+status: 4
+tags: []
+user_id: HP

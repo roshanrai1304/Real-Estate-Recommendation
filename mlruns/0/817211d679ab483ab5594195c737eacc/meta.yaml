@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/817211d679ab483ab5594195c737eacc/artifacts
+end_time: 1709469596591
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 817211d679ab483ab5594195c737eacc
+run_name: traveling-gnat-462
+run_uuid: 817211d679ab483ab5594195c737eacc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709469592160
+status: 3
+tags: []
+user_id: HP

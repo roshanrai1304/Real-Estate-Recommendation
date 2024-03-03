@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/75ce81d09f5f4d359e5435369a2ffe68/artifacts
+end_time: 1709470522633
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 75ce81d09f5f4d359e5435369a2ffe68
+run_name: whimsical-moose-811
+run_uuid: 75ce81d09f5f4d359e5435369a2ffe68
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709470518575
+status: 3
+tags: []
+user_id: HP

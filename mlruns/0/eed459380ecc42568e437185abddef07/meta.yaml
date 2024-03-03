@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/eed459380ecc42568e437185abddef07/artifacts
+end_time: 1709471280032
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eed459380ecc42568e437185abddef07
+run_name: bright-seal-438
+run_uuid: eed459380ecc42568e437185abddef07
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709471277044
+status: 3
+tags: []
+user_id: HP

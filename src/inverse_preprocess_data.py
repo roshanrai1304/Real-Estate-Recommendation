@@ -47,15 +47,15 @@ class InverseDataProcessing(InverseDataStrategy):
                 scaler_y = pickle.load(g)
             
             X_test = scaler_X.inverse_transform(X_test)
-            y_true = np.exp(scaler_y.inverse_transform(y_true.reshape(-1,1).ravel()))
-            y_pred = np.exp(scaler_y.inverse_transform(y_pred.reshape(-1,1).ravel()))
+            y_true = np.exp(scaler_y.inverse_transform(y_true.reshape(-1,1)))
+            y_pred = np.exp(scaler_y.inverse_transform(y_pred.reshape(-1,1)))
             X_test = pd.DataFrame(X_test, columns=columns_for_df)
-            print("inverse data")
             X_test['Area'] = np.exp(X_test['Area'])
             X_test['pricePerSqFeet'] = np.exp(X_test['pricePerSqFeet'])
+            # print(f"inverse data, {y_true}")
             dic = {
-                    "totalSalePrice": y_true,
-                    "predictedSalePrice": y_pred
+                    "totalSalePrice": y_true.reshape(1, -1)[0],
+                    "predictedSalePrice": y_pred.reshape(1, -1)[0]
                 }
             y_results = pd.DataFrame(dic)
             data = pd.concat([X_test, y_results], axis=1)

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/10c4370126ff4a92bf514329a45bc09e/artifacts
+end_time: 1709469416281
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 10c4370126ff4a92bf514329a45bc09e
+run_name: upbeat-cub-424
+run_uuid: 10c4370126ff4a92bf514329a45bc09e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709469416096
+status: 3
+tags: []
+user_id: HP

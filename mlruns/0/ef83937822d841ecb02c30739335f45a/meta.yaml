@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/ef83937822d841ecb02c30739335f45a/artifacts
+end_time: 1709467478514
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ef83937822d841ecb02c30739335f45a
+run_name: redolent-shrimp-686
+run_uuid: ef83937822d841ecb02c30739335f45a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709467478355
+status: 3
+tags: []
+user_id: HP

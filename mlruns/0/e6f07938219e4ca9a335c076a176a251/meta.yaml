@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e6f07938219e4ca9a335c076a176a251/artifacts
+end_time: 1709471273792
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e6f07938219e4ca9a335c076a176a251
+run_name: clean-fox-828
+run_uuid: e6f07938219e4ca9a335c076a176a251
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709471270583
+status: 3
+tags: []
+user_id: HP

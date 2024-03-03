@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e52677c2cb0245b5add6367f9f5435ce/artifacts
+end_time: 1709469583636
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e52677c2cb0245b5add6367f9f5435ce
+run_name: classy-turtle-379
+run_uuid: e52677c2cb0245b5add6367f9f5435ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709469577546
+status: 3
+tags: []
+user_id: HP

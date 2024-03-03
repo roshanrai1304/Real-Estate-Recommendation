@@ -111,6 +111,7 @@ class DataDivideStrategy(DataStrategy):
             X_train = scaling_X.transform(X_train.to_numpy())
             X_test = scaling_X.transform(X_test.to_numpy())
             y_train = scaling_y.transform(y_train.to_numpy().reshape(-1,1))
+            print(f"y_train -> {y_train.shape}")
             y_test = scaling_y.transform(y_test.to_numpy().reshape(-1,1))
             with open("scalers/scaling_X.pkl", 'wb') as f:
               pickle.dump(scaling_X, f)

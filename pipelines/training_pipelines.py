@@ -22,7 +22,7 @@ def train_pipelines(data_path: str):
     df = df.iloc[:,1:]
     X_train, X_test, y_train, y_test = clean_df(df)
     print(f"X_test.shape -> {X_test.shape}")
-    # cluster = handle_data(df)
+    cluster = handle_data(df)
     for model_type in model_names:
         with mlflow.start_run():
             try:
@@ -30,7 +30,7 @@ def train_pipelines(data_path: str):
                 r2_score, rmse, y_pred = evaluate_model(model, X_test, y_test)
                 print(f"Training model, {model_type}")
                 data = compare_results(X_test, y_test, y_pred)
-                print(f"y_pred, {y_pred}")
+                # print(f"y_pred, {y_pred}")
                 data.to_csv(f"predicted_results_{model_type}.csv")
                 with open(f"saved_models/{model_type}.pkl", "wb") as k:
                     pickle.dump(model, k)

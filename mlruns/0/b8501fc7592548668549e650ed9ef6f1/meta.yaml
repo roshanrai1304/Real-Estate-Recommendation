@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b8501fc7592548668549e650ed9ef6f1/artifacts
+end_time: 1709469142692
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b8501fc7592548668549e650ed9ef6f1
+run_name: luxuriant-mink-312
+run_uuid: b8501fc7592548668549e650ed9ef6f1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709469142562
+status: 3
+tags: []
+user_id: HP
