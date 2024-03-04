@@ -149,7 +149,7 @@ class DataCleaning:
         
 if __name__ == "__main__":
     
-    data = pd.read_csv(r"C:\Users\HP\Documents\mihir project\Real-Estate-Recommendation mlflow\data\processed_real_estate_data -  newLabel.csv")
+    data = pd.read_csv(f"data/{os.listdir('data')[0]}")
     columns_for_df = ['closestEducationalInstituteDistance',
                 'flatType',
                 'Area',

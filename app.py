@@ -25,7 +25,7 @@ def make_predictions(inputs):
       sc_X = pickle.load(f)
     with open("clusters/kmeans.pkl", 'rb') as f:
       kmeans = pickle.load(f)
-    cluster_data = pd.read_csv(r"C:\Users\HP\Documents\mihir project\Real-Estate-Recommendation mlflow\clusters\cluster_data.csv")
+    cluster_data = pd.read_csv("clusters/cluster_data.csv")
     with open("saved_models/GradientBoost.pkl", "rb") as f:
       model = pickle.load(f)
     inputs_scaled = sc_X.transform(data.to_numpy().reshape(1, -1)) 
