@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d8b30938b0644b0d805137f6fa6dd704/artifacts
+end_time: 1709561422357
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d8b30938b0644b0d805137f6fa6dd704
+run_name: placid-steed-885
+run_uuid: d8b30938b0644b0d805137f6fa6dd704
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709561418492
+status: 3
+tags: []
+user_id: HP

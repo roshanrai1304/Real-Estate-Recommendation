@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0a26a3636c5042d59864b277de311cdf/artifacts
+end_time: 1709561410165
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0a26a3636c5042d59864b277de311cdf
+run_name: casual-goose-827
+run_uuid: 0a26a3636c5042d59864b277de311cdf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709561404047
+status: 3
+tags: []
+user_id: HP

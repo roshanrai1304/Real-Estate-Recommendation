@@ -8,10 +8,11 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
     software-properties-common \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy packages required from local requirements file to Docker image requirements file
-COPY . .
+RUN git clone https://github.com/roshanrai1304/Real-Estate-Recommendation.git
 
 RUN pip3 install -r requirements.txt
 
@@ -22,4 +23,3 @@ HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
 # Command to run Streamlit application
 ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=localhost"]
-# CMD streamlit run app.py

@@ -1,6 +1,7 @@
 from pipelines.training_pipelines import train_pipelines
+import os
 
 
 if __name__ == "__main__":
     # run the pipeline
-    train_pipelines(data_path=r"C:\Users\HP\Documents\mihir project\Real-Estate-Recommendation mlflow\data\processed_real_estate_data -  newLabel.csv")
+    train_pipelines(data_path=f"data/{os.listdir('data')[0]}")
